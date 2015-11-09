@@ -20,3 +20,9 @@ Functionality:
 - estimateTrust: estimates trust between 2 nodes using a variation of TidalTrust. (Query 4)
 - cliquePercolationMethod: implementation of a Node Centric Community Detection algorithm. (https://en.wikipedia.org/wiki/Clique_percolation_method)
 - GirvanNewman: implementation of a Divisive Hierarchical Clustering algorithm. (https://en.wikipedia.org/wiki/Girvan–Newman_algorithm))
+
+Before compiling, untar Files.tar.gz
+
+compile: make
+
+run: ./sd
