@@ -21,6 +21,8 @@ Functionality:
 - cliquePercolationMethod: implementation of a Node Centric Community Detection algorithm. (https://en.wikipedia.org/wiki/Clique_percolation_method)
 - GirvanNewman: implementation of a Divisive Hierarchical Clustering algorithm. (https://en.wikipedia.org/wiki/Girvan–Newman_algorithm))
 
+A main file is included for testing.
+
 Before compiling, untar Files.tar.gz
 
 compile: make
