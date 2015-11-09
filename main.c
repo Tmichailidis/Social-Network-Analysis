@@ -1,14 +1,5 @@
-/*
- ============================================================================
- Name        : SD-2014-Part-1.c
- Version     :
- Copyright   : Lydia/Theodore/Kostas
- ============================================================================
- */
-
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "GraphLib.h"
 #include "Metrics.h"
 #include "Query1.h"

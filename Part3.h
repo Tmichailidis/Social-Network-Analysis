@@ -1,9 +1,3 @@
-
-
-//
-//  Part3.h
-//  Software
-
 #ifndef __Software__Part3__
 #define __Software__Part3__
 

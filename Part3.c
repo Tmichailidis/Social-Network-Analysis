@@ -1,7 +1,3 @@
-//
-//  Part3.c
-//  Software
-//
 #include "Part3.h"
 #include "Query1.h"
 #include "Query3.h"

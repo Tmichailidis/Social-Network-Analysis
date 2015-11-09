@@ -1,11 +1,3 @@
-//
-//  Query2.h
-//  Software
-//
-//  Created by Theodore Michailidis on 12/14/14.
-//  Copyright (c) 2014 Theodore Michailidis. All rights reserved.
-//
-
 #ifndef __Software__Query2__
 #define __Software__Query2__
 
