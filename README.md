@@ -23,7 +23,7 @@ Functionality:
 
 A main file is included for testing.
 
-Before compiling, untar Files.tar.gz
+Before running, untar Files.tar.gz
 
 compile: make
 
