@@ -1,4 +1,4 @@
-Social Network Implementation(Software Development): Creating a Social Network with users,communities,groups etc using C. Based on the SIGMOD 2014 Contest (http://www.cs.albany.edu/~sigmod14contest/task.html).
+Social Network Implementation(Software Development): Creating a Social Network with users,communities,groups and implmenting graph analysis tools using C. Based on the SIGMOD 2014 Contest (http://www.cs.albany.edu/~sigmod14contest/task.html).
 
 
 Metrics:
