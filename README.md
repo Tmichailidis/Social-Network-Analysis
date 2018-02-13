@@ -27,4 +27,4 @@ Before running, untar Files.tar.gz
 
 compile: make
 
-run: ./sd
+run: ./sn_analysis
