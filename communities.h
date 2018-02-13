@@ -1,10 +1,11 @@
-#ifndef __Software__Part3__
-#define __Software__Part3__
+#ifndef __COMMUNITIES__
+#define __COMMUNITIES__
 
-#include "defines.h"
-#include "GraphLib.h"
 #include <pthread.h>
 #include <semaphore.h>
+
+#include "defines.h"
+#include "graphLib.h"
 
 typedef struct Job{
     int forumID;
@@ -73,4 +74,4 @@ void PrintDeleteGirvanNewman(Communities * c);
 void PrintDeleteCPM(Communities * com,int k);
 void freeGraphStruct(topNGraphs* graphStruct,int N);
 
-#endif /* defined(__Software__Part3__) */
+#endif /* defined(__COMMUNITIES__) */

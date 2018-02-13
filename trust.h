@@ -1,8 +1,8 @@
-#ifndef QUERY4_H_
-#define QUERY4_H_
+#ifndef __TRUST__
+#define __TRUST__
 
 #include "defines.h"
-#include "GraphLib.h"
+#include "graphLib.h"
 
 Graph* buildTrustGraph(int forum, Graph* g);
 Graph * CreateComments(char * file,char * file2, Graph * PostGraph);
@@ -19,4 +19,4 @@ struct LikeCom
 };
 
 typedef struct LikeCom LikeCom;
-#endif /* QUERY4_H_ */
+#endif /* __TRUST__ */

@@ -1,12 +1,7 @@
-/*
- * GraphLib.c
- *
- */
-
 #include <stdio.h>
 
-#include "GraphLib.h"
 #include "defines.h"
+#include "graphLib.h"
 
 /**
  * Creates a properties object
@@ -105,6 +100,8 @@ Node* createPerson(int id, Properties* p) {
  * return value: the requested edge
  */
 Edge* createEdge(int startID, int endID, Properties* p) {
+	SILENCE(startID);
+
 	Edge * e = malloc(sizeof(Edge));
 	e->eProp = p;
 	e->ID = endID;

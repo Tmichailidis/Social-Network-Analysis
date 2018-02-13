@@ -1,4 +1,4 @@
-#include "Query4.h"
+#include "trust.h"
 
 Graph * createPostForum(char * file,char * file2, int forumID)
 {
@@ -339,10 +339,10 @@ void addTrust(Graph * trustGraph, Graph * g)	//insert trust edges in  trustGraph
                     if (l->neighbor->ID == pivot->creatorID)
                     {
                         *(double*)l->neighbor->eProp->prop[1] = 0;
-                        if((int)p->nProp->prop[0] != 0)
-                            *(double *) l->neighbor->eProp->prop[1] = 0.3*pivot->likes_count/(int)p->nProp->prop[0]; //calculating likes weight
-                        if((int)p->nProp->prop[1] != 0)
-                            *(double *) l->neighbor->eProp->prop[1] += 0.7*pivot->replies_count/(int)p->nProp->prop[1]; //calculating replies weight
+                        if((uintptr_t)p->nProp->prop[0] != 0)
+                            *(double *) l->neighbor->eProp->prop[1] = 0.3*pivot->likes_count/(uintptr_t)p->nProp->prop[0]; //calculating likes weight
+                        if((uintptr_t)p->nProp->prop[1] != 0)
+                            *(double *) l->neighbor->eProp->prop[1] += 0.7*pivot->replies_count/(uintptr_t)p->nProp->prop[1]; //calculating replies weight
                         pivot = pivot->next;
                     }
                     l = l->next;

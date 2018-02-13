@@ -1,4 +1,4 @@
-#include "Query2.h"
+#include "stalking.h"
 
 Graph * createPosts(char * file)    //Posts graph creation
 {

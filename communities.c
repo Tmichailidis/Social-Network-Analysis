@@ -1,8 +1,10 @@
-#include "Part3.h"
-#include "Query1.h"
-#include "Query3.h"
-#include "Metrics.h"
 #include <float.h>
+
+#include "trend.h"
+#include "metrics.h"
+#include "matching.h"
+#include "communities.h"
+
 #define Color_Red "\x1b[31m" // Color Start
 #define Color_end "\x1b[0m" // To flush out prev settings
 #define LOG_RED(X) printf("%s %s %s",Color_Red,X,Color_end)
@@ -655,7 +657,7 @@ Communities* cliquePercolationMethod(int k, Graph * g)
         }
     }
 
-    Queue *start,*end,*q, *tmpq;
+    Queue *end,*q, *tmpq;
     Communities  * com = NULL, *tmpCom = NULL;
     id = 1;
     for(i=0;i<cliqueG->size;i++)  //communities creation
@@ -687,7 +689,7 @@ Communities* cliquePercolationMethod(int k, Graph * g)
             q = malloc(sizeof(Queue));
             q->ID = tmpQ->ID;
             q->next = NULL;
-            start = end = q;
+            end = q;
             tmpQ = tmpQ->next;
             while(tmpQ != NULL) //cliques neighbor list and marking
             {
@@ -1136,7 +1138,7 @@ void markCommunities(Graph *g) //marking components of the graph grafo (for modu
             tmpP = g->table[i][j]->obj;
             if (tmpP->nProp->prop[1] != 0)
                 continue;
-            tmpP->nProp->prop[1] = (void *)com;
+            *((int*)tmpP->nProp->prop[1]) = (uintptr_t)com;
             if (tmpP->list == NULL)
             {
                 com++;
@@ -1160,7 +1162,7 @@ void markCommunities(Graph *g) //marking components of the graph grafo (for modu
             {
                 tmpNode = lookupNode(curQ->ID,g);
                 tmpP = tmpNode->obj;
-                tmpP->nProp->prop[1] = (void *)com;
+                *((int*)tmpP->nProp->prop[1]) = (uintptr_t)com;
                 mainList = tmpP->list;
                 while(mainList != NULL)
                 {
@@ -1194,7 +1196,8 @@ float computeModularity(Graph * g,int sum_edges) //modularity calculation
     Node * tmpNode;
     Person * tmpP;
     List * list;
-    int degree,com;
+    int degree;
+    uint64_t com;
     markCommunities(g);
     for(x = 0;x < g->size;x ++)
     {
@@ -1202,7 +1205,7 @@ float computeModularity(Graph * g,int sum_edges) //modularity calculation
         {
             tmpP = g->table[x][y]->obj;
             degree = tmpP->edges;
-            com = (int)tmpP->nProp->prop[1];
+            com = (uint64_t)tmpP->nProp->prop[1];
             list = tmpP->list;
             //First, calculating modularity for immediate neighbors
             while(list != NULL)
@@ -1230,7 +1233,7 @@ float computeModularity(Graph * g,int sum_edges) //modularity calculation
                         tmpP->distN = -1;
                         continue;
                     }
-                    if ((int)tmpP->nProp->prop[1] != com)
+                    if ((uint64_t)tmpP->nProp->prop[1] != com)
                         continue;
                     mod -= (float)tmpP->edges*degree/sum_edges; //neighbors -> remove from total sum
                 }

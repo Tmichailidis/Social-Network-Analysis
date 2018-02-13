@@ -1,4 +1,4 @@
-#include "Query3.h"
+#include "trend.h"
 
 void updateQueue(int interID, int team, int new_member, Graph * interGraph)
 {

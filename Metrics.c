@@ -1,4 +1,4 @@
-#include "Metrics.h"
+#include "metrics.h"
 
 void degreeDistribution(Graph * g)
 {

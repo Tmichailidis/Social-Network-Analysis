@@ -1,8 +1,8 @@
-#ifndef __Software__Query1__
-#define __Software__Query1__
+#ifndef __MATCHING__
+#define __MATCHING__
 
 #include "defines.h"
-#include "GraphLib.h"
+#include "graphLib.h"
 
 struct InterQueue
 {
@@ -39,4 +39,4 @@ Matches* matchSuggestion(Node* n, int k, int h, int x, int limit, Graph* g);
 Matches* findMatches(Node* n, int k, int h, int x, int limit, Graph* g,Graph* secg);
 Matches * insertionS(Matches * arr,int num);
 
-#endif /* defined(__Software__Query1__) */
+#endif /* defined(__MATCHING__) */

@@ -1,8 +1,8 @@
-#ifndef __Software__Query3__
-#define __Software__Query3__
+#ifndef __TREND__
+#define __TREND__
 
 #include "defines.h"
-#include "GraphLib.h"
+#include "graphLib.h"
 
 struct Interests
 {
@@ -27,4 +27,4 @@ typedef struct InterObj InterObj;
 
 void findTrends(int k,Graph* g, char** womenTrends, char** menTrends);
 
-#endif /* defined(__Software__Query3__) */
+#endif /* defined(__TREND__) */

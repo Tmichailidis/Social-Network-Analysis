@@ -2,7 +2,7 @@
 #define __Software__Metrics__
 
 #include "defines.h"
-#include "GraphLib.h"
+#include "graphLib.h"
 
 struct Degree {
     int counter,degree;

@@ -1,8 +1,3 @@
-/*
- * GraphLib.h
- *
-  */
-
 #ifndef GRAPHLIB_H_
 #define GRAPHLIB_H_
 

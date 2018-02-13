@@ -1,10 +1,10 @@
-#ifndef __Software__Query2__
-#define __Software__Query2__
+#ifndef __STALKING__
+#define __STALKING__
 
 #include "defines.h"
-#include "GraphLib.h"
-#include "Query1.h"
-#include "Metrics.h"
+#include "metrics.h"
+#include "graphLib.h"
+#include "matching.h"
 
 typedef Matches Stalkers;
 typedef Likes Replies;
@@ -14,4 +14,4 @@ Graph * createPosts(char * file);
 void destroyStalkers(Graph *st);
 void Metrics(Graph *g);
 
-#endif /* defined(__Software__Query2__) */
+#endif /* defined(__STALKING__) */

@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "GraphLib.h"
-#include "Metrics.h"
-#include "Query1.h"
-#include "Query2.h"
-#include "Query3.h"
-#include "Query4.h"
-#include "Part3.h"
+
+#include "trust.h"
+#include "trend.h"
 #include "defines.h"
+#include "metrics.h"
+#include "matching.h"
+#include "stalking.h"
+#include "graphLib.h"
+#include "communities.h"
 
 #define TRUST_GRAPH_REL_PROPERTIES_NUM 2
 
